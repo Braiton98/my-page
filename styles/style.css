@@ -42,6 +42,10 @@ h1{
     text-align: center;
 }
 
+.nav_items a{
+    color: #fff;
+}
+
 .nav_toggle {
     display: flex !important;
     flex-direction: column;
@@ -123,29 +127,30 @@ h1{
         align-items: center;
         transform: translateX(0) !important;
     }
-    
-    .nav_items li{
-        list-style-type: none;
-    }
-    
-    .navbar .nav_items li a {
+
+    .nav_items a{
+        margin: 15px;
         color: #fff;
         text-decoration: none;
-        margin: 15px;
+        position: relative;
     }
 
-    .nav_items li a::before{
+    .nav_items a:hover{
+        color: #777;
+    }
+    
+    .nav_items a::before{
         content: "";
         position: absolute;
         left: 0;
         bottom: 0;
         width: 0;
         height: 2px;
-        background: #fff;
+        background: #777;
         transition: all 0.5s;
     }
     
-    .nav_items li a:hover::before{
+    .nav_items a:hover::before{
         width: 100% !important;
     }
 
